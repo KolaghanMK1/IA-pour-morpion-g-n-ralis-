@@ -2,6 +2,8 @@
 
 Projet réalisé dans le cadre d'une SAE (BUT Informatique). Le sujet consistait à développer une IA jouant au morpion sur une grille pouvant atteindre 15×15. J'ai choisi de généraliser le problème en concevant une IA pour un Gomoku généralisé (taille NxN avec k pions à aligner) capable de rester réactive sur des grilles beaucoup plus grandes, testées jusqu'à 200×200.
 
+L'architecture de Gammatoe est née d'une observation faite en jouant plusieurs parties sur papier. Sur les grandes grilles, je ne raisonnais pas sur l'ensemble des cases, mais uniquement sur les alignements existants, les trous qui pouvaient les relier et les intersections entre plusieurs menaces. Plutôt que de demander à l'IA de réanalyser toute la grille après chaque coup, j'ai donc construit un modèle interne représentant directement ces éléments afin qu'elle manipule les mêmes informations que celles qui guidaient mon propre raisonnement.
+
 ## Sommaire
 
 - [Gammatoe — IA de morpion généralisé (Gomoku) à évaluation incrémentale](#gammatoe--ia-de-morpion-généralisé-gomoku-à-évaluation-incrémentale)

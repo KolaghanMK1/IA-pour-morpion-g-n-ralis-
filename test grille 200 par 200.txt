@@ -1,0 +1,6 @@
+AVG duration Gammatoe : 844548 ns top1
+
+AVG duration Gammatoe : 837224 ns top3
+
+AVG duration Gammatoe : 856357 ns
+AVG duration Gammatoe : 834382 ns

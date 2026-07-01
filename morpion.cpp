@@ -5,8 +5,10 @@ void affichage_morpion(char** tab, int size) {
 	for(int i = 0; i < size; ++i) std::cout<<" "<<i<<"  ";
 	std::cout<<std::endl;
 	for(int i = 0; i < size; ++i) {
-
-		std::cout<<i<<" | "; 
+		if (i<10)
+			std::cout<<i<<"  | ";
+		else
+			std::cout << i << " | ";
 		for(int j = 0; j < size; ++j) {
 	
 			std::cout<<tab[i][j]<<" | "; 
@@ -39,9 +41,7 @@ void delete_morpion(char** tab, int size) {
 
 void placer_morpion(char** tab, int size, int x, int y, char pion) {
 
-	if(x < size && x >= 0 && y >= 0 && y < size && tab[x][y]==' ' ) {
-		tab[x][y] = pion;
-	}
+	if(x < size && x >= 0 && y >= 0 && y < size && tab[x][y]==' ' ) tab[x][y] = pion;
 
 }
 

@@ -1,6 +1,5 @@
 #include<iostream>
-
-#pragma once
+#include"morpion.cpp"
 
 
 
@@ -26,15 +25,18 @@ void init_morpion(char** & tab, int size);
  */
 void delete_morpion(char** tab, int size);
 
-/*
-    * Place un pion dans une case si elle est libre
-    * tab : le tableau SizexSize
-    * size : la taille du tableau
-    * x : ligne où placer le pion
-    * y : colonne où placer le pion
-    * pion : pion à placer
-    */
-void placer_morpion(char **tab, int size, int x, int y, char pion);
+
+
+/* 
+ * Place un pion dans une case si elle est libre
+ * tab : le tableau SizexSize
+ * size : la taille du tableau
+ * x : ligne où placer le pion
+ * y : colonne où placer le pion
+ * pion : pion à placer 
+ */
+void placer_morpion(char** tab, int size, int x, int y, char pion);
+
 
 /* 
  * Vérifie si la case est libre et adjacent à un pion
@@ -43,7 +45,7 @@ void placer_morpion(char **tab, int size, int x, int y, char pion);
  * x : ligne où placer le pion
  * y : colonne où placer le pion
  */
-bool estLibre_morpion(char** tab, int size, int x, int y);
+bool estLibre_morpion(char** tab, int size, int x, int y, int pion);
 
 
 /* 

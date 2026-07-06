@@ -1,9 +1,8 @@
-/// @file Gammatoe_core.cpp
-/// @brief Implementation of the Gammatoe AI black box player.
+// Gammatoe_core.cpp - implémentation de l'IA Gammatoe.
 
 #include "Gammatoe.h"
 
-// INPUT: Record opponent's move
+// enregistre le coup adverse puis met à jour la structure d'axes
 void Gammatoe::play_opponent(int x, int y)
 {
     std::cout << " opponent coo : (" << x << ", " << y << ")\n";
@@ -14,11 +13,9 @@ void Gammatoe::play_opponent(int x, int y)
     board.update(false, {static_cast<uint16_t>(x), static_cast<uint16_t>(y)});
 }
 
-// OUTPUT: Compute AI's next move
+// recherche la meilleure case libre en comparant les valeurs heuristiques
 std::pair<int, int> Gammatoe::play()
 {
-    coordinates coo;
-
     coordinates best_move_coo = {0, 0};
     float best_move_value = -std::numeric_limits<float>::infinity();
     for (uint16_t i = 0; i < board.size; i++)
@@ -29,7 +26,7 @@ std::pair<int, int> Gammatoe::play()
             {
                 if (board.at2D(i, j).general_value() > best_move_value)
                 {
-                    best_move_coo = {i,j};
+                    best_move_coo = {i, j};
                     best_move_value = board.at2D(i, j).general_value();
                 }
             }
@@ -38,5 +35,4 @@ std::pair<int, int> Gammatoe::play()
     board.put_piece(true, best_move_coo);
     board.update(true, best_move_coo);
     return {best_move_coo.x, best_move_coo.y};
-    
 }

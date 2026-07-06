@@ -4,6 +4,9 @@ Projet réalisé dans le cadre d'une SAE (BUT Informatique). Le sujet consistait
 
 L'architecture de Gammatoe est née d'une observation faite en jouant plusieurs parties sur papier. Sur les grandes grilles, je ne raisonnais pas sur l'ensemble des cases, mais uniquement sur les alignements existants, les trous qui pouvaient les relier et les intersections entre plusieurs menaces. Plutôt que de demander à l'IA de réanalyser toute la grille après chaque coup, j'ai donc construit un modèle interne représentant directement ces éléments afin qu'elle manipule les mêmes informations que celles qui guidaient mon propre raisonnement.
 
+![C++](https://img.shields.io/badge/C%2B%2B-23-blue.svg)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)
+
 ## Sommaire
 
 - [Gammatoe — IA de morpion généralisé (Gomoku) à évaluation incrémentale](#gammatoe--ia-de-morpion-généralisé-gomoku-à-évaluation-incrémentale)
